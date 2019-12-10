@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入vue的核心外部文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="lin" name="star" v-model="name" />林书豪
+        <input type="radio" value="zhu" name="star" v-model="name" />朱一龙
+        <input type="radio" value="qiao" name="star" v-model="name" />乔碧萝
+        <!-- <img v-if="show=='true'" style="width:200px;height: 200px;" src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3381573685,1866477444&fm=26&gp=0.jpg"/> -->
+        <img v-if="name==lin" style="width:200px;height: 200px;" src="https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=2274830776,1067661502&fm=74&app=80&f=JPEG&size=f121,90?sec=1880279984&t=333fc6b17f60fe6b3660a2ea80063bc4" />
+        <img v-else-if="name==zhu" style="width:200px;height: 200px;" src="https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=1010692819,2730675728&fm=74&app=80&f=JPEG&size=f121,140?sec=1880279984&t=53e632985aceaca8b30fcaccb8bbcd66" />
+        <img v-else-if="name==qiao" style="width:200px;height: 200px;" src="https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1623090613,1922918411&fm=26&gp=0.jpg" />
+        <img v-else style="width:200px;height: 200px;" src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3381573685,1866477444&fm=26&gp=0.jpg" />
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                show: 'false',
+                name:""
+            }
+        })
+    </script>
+</body>
+</html>
